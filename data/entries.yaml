@@ -83,7 +83,7 @@ entries:
     last_commit: 2026-09-02
 
   - name: Harbor
-    repo: laude-institute/harbor
+    repo: harbor-framework/harbor
     section: coding
     desc: Framework for running agents on container tasks at scale; the official harness for Terminal-Bench 2.0 and can generate RL rollouts.
     use_when: You want terminal-style tasks run in parallel on cloud sandboxes.
@@ -96,7 +96,7 @@ entries:
     last_commit: 2026-11-20
 
   - name: Terminal-Bench
-    repo: laude-institute/terminal-bench
+    repo: harbor-framework/terminal-bench-1
     section: coding
     desc: Benchmark of hard command-line tasks in sandboxed terminals (v1; v2 runs through Harbor).
     use_when: You want to measure an agent's real shell skills.
@@ -255,7 +255,7 @@ entries:
     last_commit: 2026-09-03
 
   - name: ToolSandbox
-    repo: apple/ToolSandbox
+    repo: apple-aiml-research/ToolSandbox
     section: tools
     desc: Stateful, conversational tool-use benchmark with a simulated user.
     use_when: You want to test how tools change state over a conversation.
@@ -322,7 +322,7 @@ entries:
 
   # ---------------- Games & text worlds ----------------
   - name: TextArena
-    repo: LeonGuertler/TextArena
+    repo: TextArena/TextArena
     section: games
     desc: 100+ single-, two- and multi-player text games behind a Gym-style interface.
     use_when: You want cheap multi-turn environments or self-play.
@@ -387,7 +387,7 @@ entries:
     last_commit: 2026-08-19
 
   - name: NLE
-    repo: heiner/nle
+    repo: NetHack-LE/nle
     section: games
     desc: The NetHack Learning Environment — a very hard, procedurally generated roguelike.
     use_when: You want an environment no current agent comes close to solving.
@@ -455,7 +455,7 @@ entries:
 
   # ---------------- Frameworks ----------------
   - name: OpenEnv
-    repo: meta-pytorch/OpenEnv
+    repo: openenv/OpenEnv
     section: frameworks
     desc: Gymnasium-style spec where each environment is a Docker image; catalog of 40+ environments on Hugging Face.
     use_when: You're publishing an environment and want others to use it easily.
@@ -494,7 +494,7 @@ entries:
     last_commit: 2026-01-21
 
   - name: SkyRL-Gym
-    repo: NovaSky-AI/SkyRL
+    repo: skyrl-project/SkyRL
     section: frameworks
     desc: Gymnasium-API library of math, coding, search and SQL tool-use environments, shipped inside SkyRL.
     use_when: You're already training with SkyRL.
@@ -521,7 +521,7 @@ entries:
 
   # ---------------- Trainers ----------------
   - name: verl
-    repo: volcengine/verl
+    repo: verl-project/verl
     section: trainers
     desc: Widely used scalable RL post-training framework with multi-turn agent support.
     use_when: You're scaling past a single GPU.
@@ -586,7 +586,7 @@ entries:
     last_commit: 2026-10-08
 
   - name: SkyRL
-    repo: NovaSky-AI/SkyRL
+    repo: skyrl-project/SkyRL
     section: trainers
     desc: Modular full-stack RL library for long-horizon agents; used in SWE-Gym and SWE-smith recipes.
     use_when: You're training SWE agents.

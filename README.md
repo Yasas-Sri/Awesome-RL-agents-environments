@@ -34,15 +34,15 @@ Most "awesome agent" lists give you a name and a link. This one tells you what y
 
 | I want to… | Train on | Evaluate on | Trainer to try |
 |---|---|---|---|
-| Learn agent RL on a laptop or free Colab | [TextArena](https://github.com/LeonGuertler/TextArena), [Reasoning Gym](https://github.com/open-thought/reasoning-gym) | the same envs at harder settings | [Unsloth](https://github.com/unslothai/unsloth), [TRL](https://github.com/huggingface/trl) |
-| Train a software-engineering agent | [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym), [R2E-Gym](https://github.com/R2E-Gym/R2E-Gym) | [SWE-bench](https://github.com/SWE-bench/SWE-bench) | [SkyRL](https://github.com/NovaSky-AI/SkyRL) |
-| Make tasks from my own repo | [SWE-smith](https://github.com/SWE-bench/SWE-smith) | held-out tasks from the same repo | [SkyRL](https://github.com/NovaSky-AI/SkyRL) |
-| Build a tool-calling / API agent | [AppWorld](https://github.com/StonyBrookNLP/appworld) | [τ²-bench](https://github.com/sierra-research/tau2-bench), [BFCL](https://github.com/ShishirPatil/gorilla) | [verl](https://github.com/volcengine/verl), [ART](https://github.com/OpenPipe/ART) |
+| Learn agent RL on a laptop or free Colab | [TextArena](https://github.com/TextArena/TextArena), [Reasoning Gym](https://github.com/open-thought/reasoning-gym) | the same envs at harder settings | [Unsloth](https://github.com/unslothai/unsloth), [TRL](https://github.com/huggingface/trl) |
+| Train a software-engineering agent | [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym), [R2E-Gym](https://github.com/R2E-Gym/R2E-Gym) | [SWE-bench](https://github.com/SWE-bench/SWE-bench) | [SkyRL](https://github.com/skyrl-project/SkyRL) |
+| Make tasks from my own repo | [SWE-smith](https://github.com/SWE-bench/SWE-smith) | held-out tasks from the same repo | [SkyRL](https://github.com/skyrl-project/SkyRL) |
+| Build a tool-calling / API agent | [AppWorld](https://github.com/StonyBrookNLP/appworld) | [τ²-bench](https://github.com/sierra-research/tau2-bench), [BFCL](https://github.com/ShishirPatil/gorilla) | [verl](https://github.com/verl-project/verl), [ART](https://github.com/OpenPipe/ART) |
 | Test agents on real MCP servers | — | [MCPMark](https://github.com/eval-sys/mcpmark), [MCP-Universe](https://github.com/SalesforceAIResearch/MCP-Universe) | — |
-| Build a web agent | [BrowserGym](https://github.com/ServiceNow/BrowserGym) (MiniWoB), [WebShop](https://github.com/princeton-nlp/WebShop) | [WebArena](https://github.com/web-arena-x/webarena) | [verl](https://github.com/volcengine/verl) |
+| Build a web agent | [BrowserGym](https://github.com/ServiceNow/BrowserGym) (MiniWoB), [WebShop](https://github.com/princeton-nlp/WebShop) | [WebArena](https://github.com/web-arena-x/webarena) | [verl](https://github.com/verl-project/verl) |
 | Build a mobile agent | [AndroidWorld](https://github.com/google-research/android_world) | [AndroidWorld](https://github.com/google-research/android_world) (held-out params) | — |
-| Try self-play or social skills | [TextArena](https://github.com/LeonGuertler/TextArena) + [SPIRAL](https://github.com/spiral-rl/spiral), [Sotopia](https://github.com/sotopia-lab/sotopia) | [Sotopia](https://github.com/sotopia-lab/sotopia) | — |
-| Publish my own environment | [OpenEnv](https://github.com/meta-pytorch/OpenEnv) or [verifiers](https://github.com/PrimeIntellect-ai/verifiers) | — | — |
+| Try self-play or social skills | [TextArena](https://github.com/TextArena/TextArena) + [SPIRAL](https://github.com/spiral-rl/spiral), [Sotopia](https://github.com/sotopia-lab/sotopia) | [Sotopia](https://github.com/sotopia-lab/sotopia) | — |
+| Publish my own environment | [OpenEnv](https://github.com/openenv/OpenEnv) or [verifiers](https://github.com/PrimeIntellect-ai/verifiers) | — | — |
 
 ## Environments
 
@@ -50,13 +50,13 @@ Most "awesome agent" lists give you a name and a link. This one tells you what y
 
 | Name | What it is · *use when* | Use | Runs on | Multi-turn | Reward | License | Status |
 |---|---|---|---|:---:|---|---|---|
-| [Harbor](https://github.com/laude-institute/harbor)<br>![stars](https://img.shields.io/github/stars/laude-institute/harbor?style=flat-square&label=%E2%98%85) | Framework for running agents on container tasks at scale; the official harness for Terminal-Bench 2.0 and can generate RL rollouts.<br>*You want terminal-style tasks run in parallel on cloud sandboxes.* | 🏋️ + 📏 | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
+| [Harbor](https://github.com/harbor-framework/harbor)<br>![stars](https://img.shields.io/github/stars/harbor-framework/harbor?style=flat-square&label=%E2%98%85) | Framework for running agents on container tasks at scale; the official harness for Terminal-Bench 2.0 and can generate RL rollouts.<br>*You want terminal-style tasks run in parallel on cloud sandboxes.* | 🏋️ + 📏 | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
 | [MLE-bench](https://github.com/openai/mle-bench)<br>![stars](https://img.shields.io/github/stars/openai/mle-bench?style=flat-square&label=%E2%98%85) | 75 Kaggle competitions for testing end-to-end ML engineering agents.<br>*You're evaluating agents that train models, not just write code.* | 📏 Eval | ☁️ GPU / cloud | ✓ | ✅ Verifiable | MIT | 🟡 Quiet |
 | [R2E-Gym](https://github.com/R2E-Gym/R2E-Gym)<br>![stars](https://img.shields.io/github/stars/R2E-Gym/R2E-Gym?style=flat-square&label=%E2%98%85) | 8.1K procedurally curated SWE problems across 13 repos, with unit-test rewards built in.<br>*You need more SWE training tasks than SWE-Gym provides.* | 🏋️ Train | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🔴 Stale |
 | [SWE-bench](https://github.com/SWE-bench/SWE-bench)<br>![stars](https://img.shields.io/github/stars/SWE-bench/SWE-bench?style=flat-square&label=%E2%98%85) | The standard benchmark of real GitHub issues resolved by passing the repo's tests.<br>*You need the number everyone else reports. Never train on it.* | 📏 Eval | 🐳 Docker | ✓ | ✅ Verifiable | MIT | 🟢 Active |
 | [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym)<br>![stars](https://img.shields.io/github/stars/SWE-Gym/SWE-Gym?style=flat-square&label=%E2%98%85) | 2.4K real GitHub tasks from 11 Python repos, each with an executable environment and tests.<br>*You want to RL-train a SWE agent on real issues, not synthetic ones.* | 🏋️ Train | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
 | [SWE-smith](https://github.com/SWE-bench/SWE-smith)<br>![stars](https://img.shields.io/github/stars/SWE-bench/SWE-smith?style=flat-square&label=%E2%98%85) | Toolkit that turns any Python repo into an unlimited supply of bug-fixing tasks with execution environments.<br>*You want training tasks from your own codebase or a repo nobody has covered yet.* | 🏋️ Train | 🐳 Docker | ✓ | ✅ Verifiable | MIT | 🟡 Quiet |
-| [Terminal-Bench](https://github.com/laude-institute/terminal-bench)<br>![stars](https://img.shields.io/github/stars/laude-institute/terminal-bench?style=flat-square&label=%E2%98%85) | Benchmark of hard command-line tasks in sandboxed terminals (v1; v2 runs through Harbor).<br>*You want to measure an agent's real shell skills.* | 📏 Eval | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
+| [Terminal-Bench](https://github.com/harbor-framework/terminal-bench-1)<br>![stars](https://img.shields.io/github/stars/harbor-framework/terminal-bench-1?style=flat-square&label=%E2%98%85) | Benchmark of hard command-line tasks in sandboxed terminals (v1; v2 runs through Harbor).<br>*You want to measure an agent's real shell skills.* | 📏 Eval | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
 
 ### Web & browser
 
@@ -83,7 +83,7 @@ Most "awesome agent" lists give you a name and a link. This one tells you what y
 | [BFCL](https://github.com/ShishirPatil/gorilla)<br>![stars](https://img.shields.io/github/stars/ShishirPatil/gorilla?style=flat-square&label=%E2%98%85) | Berkeley Function Calling Leaderboard — function-calling accuracy including multi-turn categories.<br>*You want a quick check on raw function-calling ability.* | 📏 Eval | 💻 Laptop | ✓ | ✅ Verifiable | Apache-2.0 | 🟡 Quiet |
 | [MCP-Universe](https://github.com/SalesforceAIResearch/MCP-Universe)<br>![stars](https://img.shields.io/github/stars/SalesforceAIResearch/MCP-Universe?style=flat-square&label=%E2%98%85) | Long-horizon tasks against real MCP servers; can also run MCPMark tasks.<br>*You're evaluating agents on actual MCP servers, not mocks.* | 📏 Eval | ☁️ GPU / cloud | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
 | [MCPMark](https://github.com/eval-sys/mcpmark)<br>![stars](https://img.shields.io/github/stars/eval-sys/mcpmark?style=flat-square&label=%E2%98%85) | Verified tasks on real MCP tools (Notion, GitHub, filesystem, Postgres, Playwright) in isolated sandboxes.<br>*You want reproducible MCP evals with strict verifiers, including easy tasks for small models.* | 📏 Eval | 🐳 Docker | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
-| [ToolSandbox](https://github.com/apple/ToolSandbox)<br>![stars](https://img.shields.io/github/stars/apple/ToolSandbox?style=flat-square&label=%E2%98%85) | Stateful, conversational tool-use benchmark with a simulated user.<br>*You want to test how tools change state over a conversation.* | 📏 Eval | 💻 Laptop | ✓ | ✅ Verifiable | Apple (custom) | 🟢 Active |
+| [ToolSandbox](https://github.com/apple-aiml-research/ToolSandbox)<br>![stars](https://img.shields.io/github/stars/apple-aiml-research/ToolSandbox?style=flat-square&label=%E2%98%85) | Stateful, conversational tool-use benchmark with a simulated user.<br>*You want to test how tools change state over a conversation.* | 📏 Eval | 💻 Laptop | ✓ | ✅ Verifiable | Apple (custom) | 🟢 Active |
 | [τ-bench](https://github.com/sierra-research/tau-bench)<br>![stars](https://img.shields.io/github/stars/sierra-research/tau-bench?style=flat-square&label=%E2%98%85) | The original tool-agent-user benchmark (retail and airline); succeeded by τ²-bench.<br>*You need comparability with older papers.* | 📏 Eval | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟡 Quiet |
 | [τ²-bench](https://github.com/sierra-research/tau2-bench)<br>![stars](https://img.shields.io/github/stars/sierra-research/tau2-bench?style=flat-square&label=%E2%98%85) | Customer-service domains where an agent and a simulated user both act on shared state; adds multilingual and voice tracks.<br>*You care about multi-turn tool use with a human in the loop.* | 📏 Eval | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟢 Active |
 
@@ -99,9 +99,9 @@ Most "awesome agent" lists give you a name and a link. This one tells you what y
 |---|---|---|---|:---:|---|---|---|
 | [ALFWorld](https://github.com/alfworld/alfworld)<br>![stars](https://img.shields.io/github/stars/alfworld/alfworld?style=flat-square&label=%E2%98%85) | Text household tasks aligned with the embodied ALFRED dataset.<br>*You want a classic agent env that most RL-for-agents papers report.* | 🏋️ + 📏 | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟡 Quiet |
 | [BALROG](https://github.com/balrog-ai/BALROG)<br>![stars](https://img.shields.io/github/stars/balrog-ai/BALROG?style=flat-square&label=%E2%98%85) | Benchmark of long-horizon game environments for LLM and VLM agents, with a public leaderboard.<br>*You want to test long-horizon planning cheaply.* | 📏 Eval | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟡 Quiet |
-| [NLE](https://github.com/heiner/nle)<br>![stars](https://img.shields.io/github/stars/heiner/nle?style=flat-square&label=%E2%98%85) | The NetHack Learning Environment — a very hard, procedurally generated roguelike.<br>*You want an environment no current agent comes close to solving.* | 🏋️ + 📏 | 💻 Laptop | ✓ | ✅ Verifiable | NetHack GPL | 🟢 Active |
+| [NLE](https://github.com/NetHack-LE/nle)<br>![stars](https://img.shields.io/github/stars/NetHack-LE/nle?style=flat-square&label=%E2%98%85) | The NetHack Learning Environment — a very hard, procedurally generated roguelike.<br>*You want an environment no current agent comes close to solving.* | 🏋️ + 📏 | 💻 Laptop | ✓ | ✅ Verifiable | NetHack GPL | 🟢 Active |
 | [ScienceWorld](https://github.com/allenai/ScienceWorld)<br>![stars](https://img.shields.io/github/stars/allenai/ScienceWorld?style=flat-square&label=%E2%98%85) | Text simulator of grade-school science experiments.<br>*You want multi-step procedural tasks with partial credit.* | 🏋️ + 📏 | 💻 Laptop | ✓ | ✅ Verifiable | Apache-2.0 | 🟢 Active |
-| [TextArena](https://github.com/LeonGuertler/TextArena)<br>![stars](https://img.shields.io/github/stars/LeonGuertler/TextArena?style=flat-square&label=%E2%98%85) | 100+ single-, two- and multi-player text games behind a Gym-style interface.<br>*You want cheap multi-turn environments or self-play.* | 🏋️ + 📏 | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟢 Active |
+| [TextArena](https://github.com/TextArena/TextArena)<br>![stars](https://img.shields.io/github/stars/TextArena/TextArena?style=flat-square&label=%E2%98%85) | 100+ single-, two- and multi-player text games behind a Gym-style interface.<br>*You want cheap multi-turn environments or self-play.* | 🏋️ + 📏 | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟢 Active |
 | [TextWorld](https://github.com/microsoft/TextWorld)<br>![stars](https://img.shields.io/github/stars/microsoft/TextWorld?style=flat-square&label=%E2%98%85) | Generator and sandbox for text adventure games, built for RL agents.<br>*You want to generate your own text-game curriculum.* | 🏋️ Train | 💻 Laptop | ✓ | ✅ Verifiable | MIT | 🟢 Active |
 
 ### Social & multi-agent
@@ -128,8 +128,8 @@ An **environment** gives the agent tasks and rewards. A **trainer** updates the 
 |---|---|---|---|
 | [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL)<br>![stars](https://img.shields.io/github/stars/WooooDyy/AgentGym-RL?style=flat-square&label=%E2%98%85) | Multi-turn RL framework on top of AgentGym's environments.<br>*You want to train on AgentGym environments end to end.* | MIT | 🟡 Quiet |
 | [GEM](https://github.com/axon-rl/gem)<br>![stars](https://img.shields.io/github/stars/axon-rl/gem?style=flat-square&label=%E2%98%85) | A Gym for agentic LLMs: a standard interface plus a bundle of ready-made environments, including MCP tasks.<br>*You want a Gym-like API that feels familiar from classic RL.* | Apache-2.0 | 🟡 Quiet |
-| [OpenEnv](https://github.com/meta-pytorch/OpenEnv)<br>![stars](https://img.shields.io/github/stars/meta-pytorch/OpenEnv?style=flat-square&label=%E2%98%85) | Gymnasium-style spec where each environment is a Docker image; catalog of 40+ environments on Hugging Face.<br>*You're publishing an environment and want others to use it easily.* | BSD-3-Clause | 🟢 Active |
-| [SkyRL-Gym](https://github.com/NovaSky-AI/SkyRL)<br>![stars](https://img.shields.io/github/stars/NovaSky-AI/SkyRL?style=flat-square&label=%E2%98%85) | Gymnasium-API library of math, coding, search and SQL tool-use environments, shipped inside SkyRL.<br>*You're already training with SkyRL.* | Apache-2.0 | 🟢 Active |
+| [OpenEnv](https://github.com/openenv/OpenEnv)<br>![stars](https://img.shields.io/github/stars/openenv/OpenEnv?style=flat-square&label=%E2%98%85) | Gymnasium-style spec where each environment is a Docker image; catalog of 40+ environments on Hugging Face.<br>*You're publishing an environment and want others to use it easily.* | BSD-3-Clause | 🟢 Active |
+| [SkyRL-Gym](https://github.com/skyrl-project/SkyRL)<br>![stars](https://img.shields.io/github/stars/skyrl-project/SkyRL?style=flat-square&label=%E2%98%85) | Gymnasium-API library of math, coding, search and SQL tool-use environments, shipped inside SkyRL.<br>*You're already training with SkyRL.* | Apache-2.0 | 🟢 Active |
 | [verifiers](https://github.com/PrimeIntellect-ai/verifiers)<br>![stars](https://img.shields.io/github/stars/PrimeIntellect-ai/verifiers?style=flat-square&label=%E2%98%85) | Library for writing environments for training and evaluating LLMs, tied to the Environments Hub and prime-rl.<br>*You want to write a small environment in Python and share it.* | MIT | 🟢 Active |
 
 ### Trainers
@@ -139,22 +139,22 @@ An **environment** gives the agent tasks and rewards. A **trainer** updates the 
 | [ART](https://github.com/OpenPipe/ART)<br>![stars](https://img.shields.io/github/stars/OpenPipe/ART?style=flat-square&label=%E2%98%85) | Agent Reinforcement Trainer for multi-step agents, with Colab notebooks.<br>*You want to RL-train an existing agent loop with little glue code.* | Apache-2.0 | 🟢 Active |
 | [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)<br>![stars](https://img.shields.io/github/stars/OpenRLHF/OpenRLHF?style=flat-square&label=%E2%98%85) | Ray-based RLHF and RL framework.<br>*You already run Ray clusters.* | Apache-2.0 | 🟢 Active |
 | [rLLM](https://github.com/rllm-org/rllm)<br>![stars](https://img.shields.io/github/stars/rllm-org/rllm?style=flat-square&label=%E2%98%85) | Framework for post-training language agents with RL.<br>*You want agent-first abstractions on top of a scalable backend.* | Apache-2.0 | 🟢 Active |
-| [SkyRL](https://github.com/NovaSky-AI/SkyRL)<br>![stars](https://img.shields.io/github/stars/NovaSky-AI/SkyRL?style=flat-square&label=%E2%98%85) | Modular full-stack RL library for long-horizon agents; used in SWE-Gym and SWE-smith recipes.<br>*You're training SWE agents.* | Apache-2.0 | 🟢 Active |
+| [SkyRL](https://github.com/skyrl-project/SkyRL)<br>![stars](https://img.shields.io/github/stars/skyrl-project/SkyRL?style=flat-square&label=%E2%98%85) | Modular full-stack RL library for long-horizon agents; used in SWE-Gym and SWE-smith recipes.<br>*You're training SWE agents.* | Apache-2.0 | 🟢 Active |
 | [slime](https://github.com/THUDM/slime)<br>![stars](https://img.shields.io/github/stars/THUDM/slime?style=flat-square&label=%E2%98%85) | Large-scale RL framework used to train the GLM model family.<br>*You're doing frontier-scale RL.* | Apache-2.0 | 🟢 Active |
 | [TRL](https://github.com/huggingface/trl)<br>![stars](https://img.shields.io/github/stars/huggingface/trl?style=flat-square&label=%E2%98%85) | Hugging Face post-training library with GRPOTrainer and an async variant.<br>*You want the most documented path to GRPO.* | Apache-2.0 | 🟢 Active |
 | [Unsloth](https://github.com/unslothai/unsloth)<br>![stars](https://img.shields.io/github/stars/unslothai/unsloth?style=flat-square&label=%E2%98%85) | Memory-efficient fine-tuning, including GRPO, aimed at single consumer GPUs and Colab.<br>*You're on free or limited compute.* | Apache-2.0 (core) | 🟢 Active |
-| [verl](https://github.com/volcengine/verl)<br>![stars](https://img.shields.io/github/stars/volcengine/verl?style=flat-square&label=%E2%98%85) | Widely used scalable RL post-training framework with multi-turn agent support.<br>*You're scaling past a single GPU.* | Apache-2.0 | 🟢 Active |
+| [verl](https://github.com/verl-project/verl)<br>![stars](https://img.shields.io/github/stars/verl-project/verl?style=flat-square&label=%E2%98%85) | Widely used scalable RL post-training framework with multi-turn agent support.<br>*You're scaling past a single GPU.* | Apache-2.0 | 🟢 Active |
 
 ## Learn
 
-- [Scaling Environments for LLM Agents in the Era of Learning from Interaction: A Survey](https://arxiv.org/abs/2511.09586) — a map of how agent environments are built, scaled and used for RL.
+- [Environment Scaling for Interactive Agentic Experience Collection: A Survey](https://arxiv.org/abs/2511.09586) — a map of how agent environments are built, scaled and used for RL.
 - [OpenEnv environment catalog](https://huggingface.co/docs/openenv/environments) — browse ready-to-run environments on Hugging Face.
 - [Prime Intellect Environments Hub](https://app.primeintellect.ai/dashboard/environments) — community environments built with verifiers.
 
 ## Related lists
 
 - [AgentsMeetRL](https://github.com/thinkwee/AgentsMeetRL) — table of open-source repos for training LLM agents with RL (trainer-focused).
-- [Awesome Scaling Environments](https://github.com/lukahhcm/Awesome_Scaling_Environments) — paper list that goes with the survey above.
+- [Awesome Environment Scaling](https://github.com/lukahhcm/Awesome_Environment_Scaling) — paper list that goes with the survey above.
 - [Awesome AI Sandboxes](https://github.com/tizkovatereza/awesome-ai-sandboxes) — cloud sandboxes for running agent rollouts.
 - [Gymnasium](https://github.com/Farama-Foundation/Gymnasium) — the standard API for classic (non-LLM) RL environments.
 
@@ -171,4 +171,4 @@ An **environment** gives the agent tasks and rewards. A **trainer** updates the 
 
 ---
 
-<sub>Last generated 2026-11-21 from [`data/entries.yaml`](data/entries.yaml). Edit the YAML, not this file.</sub>
+<sub>Last generated 2026-11-22 from [`data/entries.yaml`](data/entries.yaml). Edit the YAML, not this file.</sub>
