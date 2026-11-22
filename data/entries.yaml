@@ -1,0 +1,625 @@
+# Single source of truth for the list.
+# README.md is generated from this file by scripts/build_readme.py — do not edit README tables by hand.
+#
+# Field reference (see CONTRIBUTING.md for allowed values):
+#   name        display name
+#   repo        GitHub owner/name
+#   section     one of the keys under `sections` below
+#   desc        what it is, one sentence, your own words
+#   use_when    one short "use this when…" line
+#   interface   gym | http | mcp | harness | library
+#   reward      verifiable | judge | mixed
+#   multi_turn  true | false
+#   runs_on     laptop | docker | vm | cloud
+#   use         train | eval | both
+#   license     SPDX id or short name
+#   last_commit YYYY-MM-DD   (refreshed weekly by scripts/check_status.py)
+#   archived    true | false (refreshed weekly)
+
+sections:
+  coding: "Coding & software engineering"
+  web: "Web & browser"
+  computer: "Computer use (desktop & mobile)"
+  tools: "Tool use & MCP"
+  reasoning: "Verifiable reasoning"
+  games: "Games & text worlds"
+  social: "Social & multi-agent"
+  suites: "Multi-domain suites"
+  frameworks: "Environment frameworks"
+  trainers: "Trainers"
+
+entries:
+  # ---------------- Coding ----------------
+  - name: SWE-Gym
+    repo: SWE-Gym/SWE-Gym
+    section: coding
+    desc: 2.4K real GitHub tasks from 11 Python repos, each with an executable environment and tests.
+    use_when: You want to RL-train a SWE agent on real issues, not synthetic ones.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-10-31
+
+  - name: R2E-Gym
+    repo: R2E-Gym/R2E-Gym
+    section: coding
+    desc: 8.1K procedurally curated SWE problems across 13 repos, with unit-test rewards built in.
+    use_when: You need more SWE training tasks than SWE-Gym provides.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: train
+    license: Apache-2.0
+    last_commit: 2025-07-13
+
+  - name: SWE-smith
+    repo: SWE-bench/SWE-smith
+    section: coding
+    desc: Toolkit that turns any Python repo into an unlimited supply of bug-fixing tasks with execution environments.
+    use_when: You want training tasks from your own codebase or a repo nobody has covered yet.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: train
+    license: MIT
+    last_commit: 2026-03-22
+
+  - name: SWE-bench
+    repo: SWE-bench/SWE-bench
+    section: coding
+    desc: The standard benchmark of real GitHub issues resolved by passing the repo's tests.
+    use_when: You need the number everyone else reports. Never train on it.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: eval
+    license: MIT
+    last_commit: 2026-09-02
+
+  - name: Harbor
+    repo: laude-institute/harbor
+    section: coding
+    desc: Framework for running agents on container tasks at scale; the official harness for Terminal-Bench 2.0 and can generate RL rollouts.
+    use_when: You want terminal-style tasks run in parallel on cloud sandboxes.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: both
+    license: Apache-2.0
+    last_commit: 2026-11-20
+
+  - name: Terminal-Bench
+    repo: laude-institute/terminal-bench
+    section: coding
+    desc: Benchmark of hard command-line tasks in sandboxed terminals (v1; v2 runs through Harbor).
+    use_when: You want to measure an agent's real shell skills.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: eval
+    license: Apache-2.0
+    last_commit: 2026-07-10
+
+  - name: MLE-bench
+    repo: openai/mle-bench
+    section: coding
+    desc: 75 Kaggle competitions for testing end-to-end ML engineering agents.
+    use_when: You're evaluating agents that train models, not just write code.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: cloud
+    use: eval
+    license: MIT
+    last_commit: 2026-04-24
+
+  # ---------------- Web ----------------
+  - name: BrowserGym
+    repo: ServiceNow/BrowserGym
+    section: web
+    desc: Gym interface that wraps MiniWoB, WorkArena, WebArena and others behind one browser API.
+    use_when: You want one interface for many web environments; MiniWoB tasks run on a laptop.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: both
+    license: Apache-2.0
+    last_commit: 2026-11-18
+
+  - name: WebArena
+    repo: web-arena-x/webarena
+    section: web
+    desc: Self-hosted realistic websites (shopping, forums, GitLab, CMS) with functional task checks.
+    use_when: You need the standard realistic web-agent benchmark.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: eval
+    license: Apache-2.0
+    last_commit: 2025-11-26
+
+  - name: VisualWebArena
+    repo: web-arena-x/visualwebarena
+    section: web
+    desc: WebArena extension where tasks need visual understanding of the page.
+    use_when: You're evaluating multimodal web agents.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: eval
+    license: MIT
+    last_commit: 2024-11-08
+
+  - name: WebShop
+    repo: princeton-nlp/WebShop
+    section: web
+    desc: Simulated e-commerce site with 1.18M products and 12,087 crowd-sourced shopping instructions.
+    use_when: You want a cheap, classic web-navigation environment with a training set.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: MIT
+    last_commit: 2024-09-05
+
+  # ---------------- Computer use ----------------
+  - name: OSWorld
+    repo: xlang-ai/OSWorld
+    section: computer
+    desc: Real desktop OS tasks running in virtual machines, checked by execution-based scripts.
+    use_when: You're building full computer-use agents.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: vm
+    use: eval
+    license: Apache-2.0
+    last_commit: 2026-11-13
+
+  - name: Windows Agent Arena
+    repo: microsoft/WindowsAgentArena
+    section: computer
+    desc: Windows-OS tasks across real apps, run in a VM.
+    use_when: Your agent needs to work on Windows specifically.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: vm
+    use: eval
+    license: MIT
+    last_commit: 2026-10-26
+
+  - name: AndroidWorld
+    repo: google-research/android_world
+    section: computer
+    desc: 116 parameterized tasks across 20 Android apps, instantiated dynamically on an emulator.
+    use_when: You're training or testing mobile agents; parameterized tasks give you many variants.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: vm
+    use: both
+    license: Apache-2.0
+    last_commit: 2026-10-23
+
+  # ---------------- Tool use & MCP ----------------
+  - name: τ²-bench
+    repo: sierra-research/tau2-bench
+    section: tools
+    desc: Customer-service domains where an agent and a simulated user both act on shared state; adds multilingual and voice tracks.
+    use_when: You care about multi-turn tool use with a human in the loop.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: eval
+    license: MIT
+    last_commit: 2026-11-20
+
+  - name: τ-bench
+    repo: sierra-research/tau-bench
+    section: tools
+    desc: The original tool-agent-user benchmark (retail and airline); succeeded by τ²-bench.
+    use_when: You need comparability with older papers.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: eval
+    license: MIT
+    last_commit: 2026-03-18
+
+  - name: AppWorld
+    repo: StonyBrookNLP/appworld
+    section: tools
+    desc: Simulated world of 9 everyday apps and 457 APIs, with train/dev splits and parallel worlds for RL rollouts.
+    use_when: You want rich, stateful API tasks that run fully offline.
+    interface: library
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: Apache-2.0
+    last_commit: 2026-09-03
+
+  - name: ToolSandbox
+    repo: apple/ToolSandbox
+    section: tools
+    desc: Stateful, conversational tool-use benchmark with a simulated user.
+    use_when: You want to test how tools change state over a conversation.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: eval
+    license: Apple (custom)
+    last_commit: 2026-09-11
+
+  - name: BFCL
+    repo: ShishirPatil/gorilla
+    section: tools
+    desc: Berkeley Function Calling Leaderboard — function-calling accuracy including multi-turn categories.
+    use_when: You want a quick check on raw function-calling ability.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: eval
+    license: Apache-2.0
+    last_commit: 2026-03-23
+
+  - name: MCP-Universe
+    repo: SalesforceAIResearch/MCP-Universe
+    section: tools
+    desc: Long-horizon tasks against real MCP servers; can also run MCPMark tasks.
+    use_when: You're evaluating agents on actual MCP servers, not mocks.
+    interface: mcp
+    reward: verifiable
+    multi_turn: true
+    runs_on: cloud
+    use: eval
+    license: Apache-2.0
+    last_commit: 2026-10-08
+
+  - name: MCPMark
+    repo: eval-sys/mcpmark
+    section: tools
+    desc: Verified tasks on real MCP tools (Notion, GitHub, filesystem, Postgres, Playwright) in isolated sandboxes.
+    use_when: You want reproducible MCP evals with strict verifiers, including easy tasks for small models.
+    interface: mcp
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: eval
+    license: Apache-2.0
+    last_commit: 2026-06-12
+
+  # ---------------- Reasoning ----------------
+  - name: Reasoning Gym
+    repo: open-thought/reasoning-gym
+    section: reasoning
+    desc: 100+ procedural generators of verifiable reasoning tasks (algebra, logic, graphs, games) with adjustable difficulty.
+    use_when: You want unlimited RLVR data with a curriculum; works directly with verifiers.
+    interface: library
+    reward: verifiable
+    multi_turn: false
+    runs_on: laptop
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-09
+
+  # ---------------- Games & text worlds ----------------
+  - name: TextArena
+    repo: LeonGuertler/TextArena
+    section: games
+    desc: 100+ single-, two- and multi-player text games behind a Gym-style interface.
+    use_when: You want cheap multi-turn environments or self-play.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: MIT
+    last_commit: 2026-10-03
+
+  - name: BALROG
+    repo: balrog-ai/BALROG
+    section: games
+    desc: Benchmark of long-horizon game environments for LLM and VLM agents, with a public leaderboard.
+    use_when: You want to test long-horizon planning cheaply.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: eval
+    license: MIT
+    last_commit: 2026-04-09
+
+  - name: TextWorld
+    repo: microsoft/TextWorld
+    section: games
+    desc: Generator and sandbox for text adventure games, built for RL agents.
+    use_when: You want to generate your own text-game curriculum.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: train
+    license: MIT
+    last_commit: 2026-11-10
+
+  - name: ALFWorld
+    repo: alfworld/alfworld
+    section: games
+    desc: Text household tasks aligned with the embodied ALFRED dataset.
+    use_when: You want a classic agent env that most RL-for-agents papers report.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: MIT
+    last_commit: 2026-02-08
+
+  - name: ScienceWorld
+    repo: allenai/ScienceWorld
+    section: games
+    desc: Text simulator of grade-school science experiments.
+    use_when: You want multi-step procedural tasks with partial credit.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: Apache-2.0
+    last_commit: 2026-08-19
+
+  - name: NLE
+    repo: heiner/nle
+    section: games
+    desc: The NetHack Learning Environment — a very hard, procedurally generated roguelike.
+    use_when: You want an environment no current agent comes close to solving.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: NetHack GPL
+    last_commit: 2026-06-12
+
+  # ---------------- Social & multi-agent ----------------
+  - name: Sotopia
+    repo: sotopia-lab/sotopia
+    section: social
+    desc: Open-ended social scenarios where agents interact and are scored on social goals.
+    use_when: You're training or testing social and negotiation skills.
+    interface: library
+    reward: judge
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: MIT
+    last_commit: 2026-01-06
+
+  - name: SPIRAL
+    repo: spiral-rl/spiral
+    section: social
+    desc: Recipe for multi-agent, multi-turn self-play RL on zero-sum games built on TextArena.
+    use_when: You want a working self-play setup instead of building one.
+    interface: library
+    reward: verifiable
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: MIT
+    last_commit: 2026-03-28
+
+  # ---------------- Suites ----------------
+  - name: AgentGym
+    repo: WooooDyy/AgentGym
+    section: suites
+    desc: Many agent environments (web, embodied, games and more) served behind one HTTP interface.
+    use_when: You want to train across many domains with one client.
+    interface: http
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: both
+    license: MIT
+    last_commit: 2026-05-30
+
+  - name: AgentBench
+    repo: THUDM/AgentBench
+    section: suites
+    desc: Eight environments including OS, database, knowledge graph and card game tasks.
+    use_when: You want a broad agent eval across very different domains.
+    interface: harness
+    reward: verifiable
+    multi_turn: true
+    runs_on: docker
+    use: eval
+    license: Apache-2.0
+    last_commit: 2026-02-09
+
+  # ---------------- Frameworks ----------------
+  - name: OpenEnv
+    repo: meta-pytorch/OpenEnv
+    section: frameworks
+    desc: Gymnasium-style spec where each environment is a Docker image; catalog of 40+ environments on Hugging Face.
+    use_when: You're publishing an environment and want others to use it easily.
+    interface: gym
+    reward: mixed
+    multi_turn: true
+    runs_on: docker
+    use: both
+    license: BSD-3-Clause
+    last_commit: 2026-11-20
+
+  - name: verifiers
+    repo: PrimeIntellect-ai/verifiers
+    section: frameworks
+    desc: Library for writing environments for training and evaluating LLMs, tied to the Environments Hub and prime-rl.
+    use_when: You want to write a small environment in Python and share it.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: MIT
+    last_commit: 2026-11-21
+
+  - name: GEM
+    repo: axon-rl/gem
+    section: frameworks
+    desc: "A Gym for agentic LLMs: a standard interface plus a bundle of ready-made environments, including MCP tasks."
+    use_when: You want a Gym-like API that feels familiar from classic RL.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: both
+    license: Apache-2.0
+    last_commit: 2026-01-21
+
+  - name: SkyRL-Gym
+    repo: NovaSky-AI/SkyRL
+    section: frameworks
+    desc: Gymnasium-API library of math, coding, search and SQL tool-use environments, shipped inside SkyRL.
+    use_when: You're already training with SkyRL.
+    interface: gym
+    reward: verifiable
+    multi_turn: true
+    runs_on: laptop
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-20
+
+  - name: AgentGym-RL
+    repo: WooooDyy/AgentGym-RL
+    section: frameworks
+    desc: Multi-turn RL framework on top of AgentGym's environments.
+    use_when: You want to train on AgentGym environments end to end.
+    interface: http
+    reward: verifiable
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: MIT
+    last_commit: 2026-02-15
+
+  # ---------------- Trainers ----------------
+  - name: verl
+    repo: volcengine/verl
+    section: trainers
+    desc: Widely used scalable RL post-training framework with multi-turn agent support.
+    use_when: You're scaling past a single GPU.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-20
+
+  - name: TRL
+    repo: huggingface/trl
+    section: trainers
+    desc: Hugging Face post-training library with GRPOTrainer and an async variant.
+    use_when: You want the most documented path to GRPO.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-21
+
+  - name: Unsloth
+    repo: unslothai/unsloth
+    section: trainers
+    desc: Memory-efficient fine-tuning, including GRPO, aimed at single consumer GPUs and Colab.
+    use_when: You're on free or limited compute.
+    interface: library
+    reward: mixed
+    multi_turn: false
+    runs_on: cloud
+    use: train
+    license: Apache-2.0 (core)
+    last_commit: 2026-11-21
+
+  - name: ART
+    repo: OpenPipe/ART
+    section: trainers
+    desc: Agent Reinforcement Trainer for multi-step agents, with Colab notebooks.
+    use_when: You want to RL-train an existing agent loop with little glue code.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-16
+
+  - name: rLLM
+    repo: rllm-org/rllm
+    section: trainers
+    desc: Framework for post-training language agents with RL.
+    use_when: You want agent-first abstractions on top of a scalable backend.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-10-08
+
+  - name: SkyRL
+    repo: NovaSky-AI/SkyRL
+    section: trainers
+    desc: Modular full-stack RL library for long-horizon agents; used in SWE-Gym and SWE-smith recipes.
+    use_when: You're training SWE agents.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-20
+
+  - name: slime
+    repo: THUDM/slime
+    section: trainers
+    desc: Large-scale RL framework used to train the GLM model family.
+    use_when: You're doing frontier-scale RL.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-06
+
+  - name: OpenRLHF
+    repo: OpenRLHF/OpenRLHF
+    section: trainers
+    desc: Ray-based RLHF and RL framework.
+    use_when: You already run Ray clusters.
+    interface: library
+    reward: mixed
+    multi_turn: true
+    runs_on: cloud
+    use: train
+    license: Apache-2.0
+    last_commit: 2026-11-03
